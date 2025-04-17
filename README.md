@@ -1,4 +1,6 @@
-Goal: Create a crate for Alire for a specific board in the ADL. User will be able to download the board, and automatically download the ADL drivers. If he want to use an other board, It will then use be linked to the ADL already downloaded.
+# Object #
+
+Create a crate for Alire for a specific board in the ADL. User will be able to download the board, and automatically download the ADL drivers. If he want to use an other board, It will then use be linked to the ADL already downloaded.
 
 
 Solution: We split the ADL into 5 crates.
@@ -42,4 +44,5 @@ for Source_Dirs use ("src/**", "config/", Adl_Middleware_P_Config.ADL_CONFIG_PAT
 
 The nucleo_f446re GPR is modified and every Source path is removed.
 
-
+## TODO ##
+- Complete alire.toml for each crate to describe the crate release (version, description etc).
