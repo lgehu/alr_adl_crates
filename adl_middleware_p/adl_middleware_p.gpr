@@ -1,10 +1,11 @@
 with "config/adl_middleware_p_config.gpr";
+
 project Adl_Middleware_P is
 
    for Library_Name use "Adl_Middleware_P";
    for Library_Version use Project'Library_Name & ".so." & Adl_Middleware_P_Config.Crate_Version;
 
-   for Source_Dirs use ("src/**", "config/");
+   for Source_Dirs use ("src/**", "config/", Adl_Middleware_P_Config.ADL_CONFIG_PATH);
    for Object_Dir use "obj/" & Adl_Middleware_P_Config.Build_Profile;
    for Create_Missing_Dirs use "True";
    for Library_Dir use "lib";

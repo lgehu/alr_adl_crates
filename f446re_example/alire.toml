@@ -1,4 +1,4 @@
-name = "nucleo_f446re"
+name = "f446re_example"
 description = ""
 version = "0.1.0-dev"
 
@@ -9,12 +9,13 @@ licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags = []
 
-[configuration.values]
-adl_middleware_p.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"
+executables = ["f446re_example"]
 
 [[depends-on]]
-arm = "~0.1.0-dev"
+nucleo_f446re = "~0.1.0-dev"
 
 [[pins]]
-arm = { path='../arm' }
+nucleo_f446re = { path='../nucleo_f446re' }
 
+[[pins]]
+stm32_common = { path='../stm32_common' }

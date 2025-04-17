@@ -14,8 +14,6 @@ hal = "=0.1.0-dev"
 [[pins]]
 hal = { path='../hal' }
 
-[[depends-on]]
-nucleo_f446re = "~0.1.0-dev"
+[configuration.variables]
+ADL_CONFIG_PATH = {type = "String", default = ""}
 
-[[pins]]
-nucleo_f446re = { path='../nucleo_f446re' }

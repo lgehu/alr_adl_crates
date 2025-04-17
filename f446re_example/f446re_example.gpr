@@ -1,0 +1,24 @@
+with "config/f446re_example_config.gpr";
+with "../nucleo_f446re/nucleo_f446re.gpr";
+
+project F446re_Example is
+
+   for Runtime ("Ada") use nucleo_f446re'Runtime ("Ada");
+   for Target use "arm-eabi";
+   for Main use ("main.adb");
+   for Languages use ("Ada");
+   for Source_Dirs use ("src", "config/");
+   for Object_Dir use "obj/";
+   for Create_Missing_Dirs use "True";
+
+   package Compiler renames nucleo_f446re.Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
+
+end F446re_Example;

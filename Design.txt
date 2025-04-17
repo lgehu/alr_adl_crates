@@ -23,8 +23,7 @@ middleware need two dependencies hal and f446re
 Done : 
 
 build ==> 
-	adl_middleware_p
-	nucleo_f446re (Had to remove folder stp to have one als_config.ads)
+	nucleo_f446re (Had to remove folder stp to have one ald_config.ads)
 	hal
 	components
 
@@ -32,5 +31,9 @@ build ==>
 Need:
 
 build ==> 
+	adl_middleware_p 
 	stm32_common <== ARM
-	components
+	
+Issues: The middleware package depend on adl_config defined in a specific board. Thus, it turn out with a circular reference.
+
+Solution: crate a variable 

@@ -7,3 +7,9 @@ maintainers = ["Your Name <example@example.com>"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags = []
+
+[[depends-on]]
+arm = "~0.1.0-dev"
+
+[[pins]]
+arm = { path='../arm' }
