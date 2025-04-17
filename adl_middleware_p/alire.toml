@@ -1,0 +1,21 @@
+name = "adl_middleware_p"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["Your Name"]
+maintainers = ["Your Name <example@example.com>"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+[[depends-on]]
+hal = "=0.1.0-dev"
+
+[[pins]]
+hal = { path='../hal' }
+
+[[depends-on]]
+nucleo_f446re = "~0.1.0-dev"
+
+[[pins]]
+nucleo_f446re = { path='../nucleo_f446re' }

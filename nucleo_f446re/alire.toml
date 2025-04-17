@@ -1,0 +1,10 @@
+name = "nucleo_f446re"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["lauric"]
+maintainers = ["lauric <lauric_gehu@etu.u-bourgogne.fr>"]
+maintainers-logins = ["lgehu"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []

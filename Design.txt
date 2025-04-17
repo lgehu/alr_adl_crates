@@ -1,0 +1,36 @@
+The architecture of this crate is as explained : 
+
+
+
+With the use of the ADL, the minimal architecture needed to use an STM32 is composed of the folders :
+
+-- Middleware
+-- ARM
+-- Components
+-- hal
+-- [board folder] as an example, we will use the f446re
+-- stm32_common
+
+
+
+hal and the f446re folder don't need dependencies in order to build their library
+
+middleware need two dependencies hal and f446re
+
+
+
+
+Done : 
+
+build ==> 
+	adl_middleware_p
+	nucleo_f446re (Had to remove folder stp to have one als_config.ads)
+	hal
+	components
+
+
+Need:
+
+build ==> 
+	stm32_common <== ARM
+	components

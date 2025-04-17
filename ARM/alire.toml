@@ -1,0 +1,21 @@
+name = "arm"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["Your Name"]
+maintainers = ["Your Name <example@example.com>"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+[[depends-on]]
+hal = "~0.1.0-dev"
+
+[[pins]]
+hal = { path='../hal' }
+
+[[depends-on]]
+adl_middleware_p = "~0.1.0-dev"
+
+[[pins]]
+adl_middleware_p = { path='../adl_middleware_p' }
