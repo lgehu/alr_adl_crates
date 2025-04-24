@@ -32,21 +32,21 @@ Then, we made a concrete project to build everything:
 alr init --bin f446re_example; cd f446re_example; alr with arm --use="../arm/"; alr with stm32_common --use="../stm32_common/";
 alr toolchain --select gnat_arm_elf=14.2.1 gprbuild=22.0.1
 alr build
-```bash
+```
 
 In the middleware GPR. We add ADL_CONFIG_PATH variable set by the alire.toml in the nucleof446re.
 Thus, every new board will have to add the following lines in their alire.toml:
 
-[configuration.values]
-adl_middleware_p.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"
+`[configuration.values]
+adl_middleware_p.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"`<br/>
 
 This is needed to bypass circular reference with alire, since the middleware depend on the board.
+The middleware .toml has these lines added: <br/>
 
-The middleware .toml has these lines added:
-[configuration.variables]
+`[configuration.variables]
 ADL_CONFIG_PATH = {type = "String", default = ""}
 And the GPR has:  
-for Source_Dirs use ("src/**", "config/", Adl_Middleware_P_Config.ADL_CONFIG_PATH);
+for Source_Dirs use ("src/**", "config/", Adl_Middleware_P_Config.ADL_CONFIG_PATH);`
 
 The nucleo_f446re GPR is modified and every Source path is removed.
 
