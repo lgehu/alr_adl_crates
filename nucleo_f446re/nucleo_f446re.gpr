@@ -33,11 +33,13 @@ library project nucleo_f446re is
          when "Production" =>
             for Default_Switches ("Ada") use
               ("-O3",     -- Optimization
+               "-gnat2022",
                "-gnatp",  -- Supress checks
                "-gnatn"); -- Enable inlining
          when "Debug" =>
             for Default_Switches ("Ada") use
               ("-O0",    -- No optimization
+               "-gnat2022",
                "-gnata") -- Enable assertions
               & Callgraph_Switch;
       end case;
