@@ -37,18 +37,25 @@ alr build
 In the middleware GPR. We add ADL_CONFIG_PATH variable set by the alire.toml in the nucleof446re.
 Thus, every new board will have to add the following lines in their alire.toml:
 
-[configuration.values]  <br/>
-adl_middleware_p.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"<br/>
+[configuration.values]
+middleware.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"
 
 This is needed to bypass circular reference with alire, since the middleware depend on the board.
-The middleware .toml has these lines added: <br/>
 
-[configuration.variables]  <br/>
-ADL_CONFIG_PATH = {type = "String", default = ""}  <br/>
-And the GPR has:   <br/>
-for Source_Dirs use ("src/**", "config/", Adl_Middleware_P_Config.ADL_CONFIG_PATH);`  <br/>
+The middleware .toml has these lines added:
+[configuration.variables]
+ADL_CONFIG_PATH = {type = "String", default = ""}
+And the GPR has:  
+for Source_Dirs use ("src/**", "config/", Middleware_Config.ADL_CONFIG_PATH);
 
 The nucleo_f446re GPR is modified and every Source path is removed.
+
+# Remote depo without alire index
+In this branch we try to reference each dependencies of crate to this repo. This repo would act as a private alire index.
+In this way, use could do something like: alr with use='https://github.com/lgehul/alr_adl_crates/middleware/middleware.git'
+However, we can't init subrepo into the same repo.
+The easy way would be to have one repo for each folder but we are trying to keep everything grouped.
+
 
 ## TODO ##
 - Complete alire.toml for each crate to describe the crate release (version, description etc).

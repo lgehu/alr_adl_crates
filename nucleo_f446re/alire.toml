@@ -10,7 +10,7 @@ website = ""
 tags = []
 
 [configuration.values]
-adl_middleware_p.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"
+middleware.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"
 
 [[depends-on]]
 arm = "~0.1.0-dev"
