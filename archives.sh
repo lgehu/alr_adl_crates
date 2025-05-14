@@ -11,8 +11,8 @@ for dir in */ ; do
     # Vérifier si ce sous-dossier existe dans git
     if git ls-tree -d "$BRANCH" "$name" > /dev/null 2>&1; then
         echo "Archivage de $name..."
-        git archive --format=tar.gz --prefix="$name/" $BRANCH $name -o "${name}.tar.gz"
+        git archive --format=tar.gz --prefix="$name/" $BRANCH $name -o "${name}/${name}.tar.gz"
     else
-        echo "⚠️  Dossier $name non suivi par Git, ignoré."
+        echo "Dossier $name non suivi par Git, ignoré."
     fi
 done
