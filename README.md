@@ -52,9 +52,13 @@ The nucleo_f446re GPR is modified and every Source path is removed.
 
 # Remote depo without alire index
 In this branch we try to reference each dependencies of crate to this repo. This repo would act as a private alire index.
-In this way, use could do something like: alr with use='https://github.com/lgehul/alr_adl_crates/middleware/middleware.git'
-However, we can't init subrepo into the same repo.
-The easy way would be to have one repo for each folder but we are trying to keep everything grouped.
+In this way, use could do something like: `alr with use='https://github.com/lgehul/alr_adl_crates/middleware/middleware.git'`  
+Or by simply adding a new private index: `alr index --add=git+https://github.com/lgehu/alire-index.git --name private`  
+
+Then, we create an archive for each crate in the repo with:  
+`alr publish --tar --skip-build --for-private-index`  
+Here, we skip build step because the hal and middleware are abstract and cannot be compiled unless a compiler is specified. We also specify that we do not publish on the community index.
+Once done, it generate an archive that we have to push in the repo and a .toml to be copied and push in our private index.
 
 
 ## TODO ##
