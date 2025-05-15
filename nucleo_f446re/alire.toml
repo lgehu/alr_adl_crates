@@ -13,8 +13,4 @@ tags = []
 middleware.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"
 
 [[depends-on]]
-arm = "~0.1.0-dev"
-
-[[pins]]
-arm = { path='../arm' }
-
+arm = "=0.1.0-dev"

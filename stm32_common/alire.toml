@@ -3,8 +3,9 @@ description = ""
 version = "0.1.0-dev"
 
 authors = ["Your Name"]
-maintainers = ["Your Name <example@example.com>"]
+maintainers = ["lgehu <lauric_gehu@etu.u-bourgogne.fr"]
+maintainers-login = ["lgehu"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
-tags = []
+tags = ["stm32", "arm"]
 
