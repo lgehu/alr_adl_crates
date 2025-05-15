@@ -3,8 +3,8 @@ description = ""
 version = "0.1.0-dev"
 
 authors = ["Your Name"]
-maintainers = ["lgehu <lauric_gehu@etu.u-bourgogne.fr"]
-maintainers-login = ["lgehu"]
+maintainers = ["lgehu <lauric_gehu@etu.u-bourgogne.fr>"]
+maintainers-logins = ["lgehu"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags = ["stm32", "arm"]
