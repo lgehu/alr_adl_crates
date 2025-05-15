@@ -9,15 +9,9 @@ licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags = []
 
-[[depends-on]]
-hal = "~0.1.0-dev"
-
-[[pins]]
-hal = { path='../hal' }
 
 [[depends-on]]
-middleware = "~0.1.0-dev"
+middleware = "=0.1.0-dev"
 
-[[pins]]
-middleware = { path='../middleware' }
-
+[[depends-on]]
+hal = "=0.1.0-dev"
