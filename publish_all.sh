@@ -8,6 +8,6 @@ for dir in */ ; do
         cd "$CRATE_NAME" || exit
     "$SCRIPT_DIR/publish_one.sh" "$CRATE_NAME"
     )
-    cp $CRATE_NAME/alire/archives/* .
+    cp $CRATE_NAME/alire/archives/* $CRATE_NAME/
     cp $CRATE_NAME/alire/releases/* ../../alire-index/index/$PREFIX/$CRATE_NAME/
 done
