@@ -16,6 +16,3 @@ nucleo_f446re = "~0.1.0-dev"
 
 [[pins]]
 nucleo_f446re = { path='../nucleo_f446re' }
-
-[[pins]]
-stm32_common = { path='../stm32_common' }
