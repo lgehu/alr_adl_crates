@@ -16,4 +16,5 @@ tags =  ["stm32", "board"]
 ADL_CONFIG_PATH.set= "${CRATE_ROOT}/src/full/"
 
 [[depends-on]]
-arm = "=0.1.0-dev"
+arm = "0.1.0-dev"
+
