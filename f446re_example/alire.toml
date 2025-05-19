@@ -7,7 +7,7 @@ maintainers = ["lauric <lauric_gehu@etu.u-bourgogne.fr>"]
 maintainers-logins = ["lgehu"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
-tags = []
+tags = ["stm32", "nucleo_f446re"]
 
 executables = ["f446re_example"]
 
@@ -16,3 +16,9 @@ stm32_common = "~0.1.0-dev"
 
 [[depends-on]]
 nucleo_f446re = "~0.1.0-dev"
+<<<<<<< HEAD
+=======
+
+[[pins]]
+nucleo_f446re = { path='../nucleo_f446re' }
+>>>>>>> environment

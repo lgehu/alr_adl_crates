@@ -2,16 +2,35 @@ name = "arm"
 description = ""
 version = "0.1.0-dev"
 
+<<<<<<< HEAD
 authors = ["Your Name"]
+=======
+authors = ["lgeh"]
+>>>>>>> environment
 maintainers = ["lgehu <lauric_gehu@etu.u-bourgogne.fr>"]
 maintainers-logins = ["lgehu"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
-tags = []
+tags = ["arm", "stm", "drivers"]
 
+<<<<<<< HEAD
 
 [[depends-on]]
 middleware = "=0.1.0-dev"
 
 [[depends-on]]
 hal = "=0.1.0-dev"
+=======
+[[depends-on]]
+hal = "~0.1.0-dev"
+
+[[pins]]
+hal = { path='../hal' }
+
+[[depends-on]]
+middleware = "~0.1.0-dev"
+
+[[pins]]
+middleware = { path='../middleware' }
+
+>>>>>>> environment

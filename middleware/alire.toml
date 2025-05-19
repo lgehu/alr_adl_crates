@@ -2,7 +2,7 @@ name = "middleware"
 description = ""
 version = "0.1.0-dev"
 
-authors = ["Your Name"]
+authors = ["lgehu"]
 maintainers = ["lgehu <lauric_gehu@etu.u-bourgogne.fr>"]
 maintainers-logins = ["lgehu"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
@@ -16,6 +16,11 @@ ADL_CONFIG_PATH = {type = "String", default = ""}
 [[depends-on]]
 hal = "=0.1.0-dev"
 
+<<<<<<< HEAD
 
 [[pins]]
 url = 
+=======
+[[pins]]
+hal = { path='../hal' }
+>>>>>>> environment
