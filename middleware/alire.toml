@@ -9,18 +9,6 @@ licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags = []
 
-[configuration.variables]
-ADL_CONFIG_PATH = {type = "String", default = ""}
-
-
 [[depends-on]]
 hal = "=0.1.0-dev"
 
-<<<<<<< HEAD
-
-[[pins]]
-url = 
-=======
-[[pins]]
-hal = { path='../hal' }
->>>>>>> environment
