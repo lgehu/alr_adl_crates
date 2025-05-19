@@ -9,8 +9,11 @@ licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags =  ["stm32", "board"]
 
-[configuration.values]
-middleware.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"
+#[configuration.values]
+#middleware.ADL_CONFIG_PATH = "${CRATE_ROOT}/src/full/"
+
+[environment]
+ADL_CONFIG_PATH.set= "${CRATE_ROOT}/src/full/"
 
 [[depends-on]]
 arm = "~0.1.0-dev"
