@@ -11,9 +11,6 @@ tags = []
 [[depends-on]]
 hal = "~0.1.0-dev"
 
-[[pins]]
-hal = { path='../hal' }
-
 [[depends-on]]
 middleware = "~0.1.0-dev"
 
