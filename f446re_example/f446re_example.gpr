@@ -1,5 +1,5 @@
 with "config/f446re_example_config.gpr";
-with "../nucleo_f446re/nucleo_f446re.gpr";
+with "nucleo_f446re.gpr";
 
 project F446re_Example is
 
