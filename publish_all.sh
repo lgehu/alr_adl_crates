@@ -15,8 +15,14 @@ done
 for dir in */ ; do
     CRATE_NAME=${dir%/}
     PREFIX=${CRATE_NAME:0:2}
+
+    RELEASE_P=$CRATE_NAME/alire/releases/*
+
     cp $CRATE_NAME/alire/archives/* $CRATE_NAME/
-    cp $CRATE_NAME/alire/releases/* ../alire-index/index/$PREFIX/$CRATE_NAME/
+   
+    # Replace local URL by remote URL
+    sed -i '/url =/c\url = https://github.com/lgehu/alr_adl_crates/raw/refs/heads/remote-dep/'$CRATE_NAME-0.1.0-dev.tgz $RELEASE_P
+    cp $RELEASE_P ../alire-index/index/$PREFIX/$CRATE_NAME/
 done
 
 #git stash pop 
