@@ -50,6 +50,6 @@ push()
 
     alr index --update-all
 }
-push()
+push
 
 #git stash pop 
