@@ -7,7 +7,7 @@ maintainers = ["lgehu <lauric_gehu@etu.u-bourgogne.fr>"]
 maintainers-logins = ["lgehu"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
-tags = ["arm", "stm", "drivers"]
+tags = ["stm", "drivers"]
 
 [[depends-on]]
 middleware = "=0.1.0-dev"
