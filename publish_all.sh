@@ -37,15 +37,19 @@ for dir in $CRATES; do
 done
 
 # Commit and push on alr_adl_crates and alire-index repo
-git add -A
-git commit -m "release $CRATE_VERSION"
-git push origin remote-dep
+push()
+{
+    git add -A
+    git commit -m "release $CRATE_VERSION"
+    git push origin remote-dep
 
-cd ../alire-index
-git add -A
-git commit -m "release $CRATE_VERSION"
-git push origin
+    cd ../alire-index
+    git add -A
+    git commit -m "release $CRATE_VERSION"
+    git push origin
 
-alr index --update-all
+    alr index --update-all
+}
+#push()
 
 #git stash pop 
