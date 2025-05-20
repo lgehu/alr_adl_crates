@@ -30,7 +30,9 @@ for dir in $CRATES; do
     cp $CRATE_NAME/alire/archives/* $CRATE_NAME/
    
     # Replace local URL by remote URL
-    sed -i "/url =/c\url = \"https://github.com/lgehu/alr_adl_crates/raw/refs/heads/remote-dep/$CRATE_NAME-$CRATE_VERSION.tgz\"" $RELEASE_P/$CRATE_NAME-$CRATE_VERSION.toml
+    sed -i "/url =/c\url = \"https://github.com/lgehu/alr_adl_crates/raw/refs/heads/remote-dep/$CRATE_NAME/$CRATE_NAME-$CRATE_VERSION.tgz\"" $RELEASE_P/$CRATE_NAME-$CRATE_VERSION.toml
+   
+    mkdir -p ../alire-index/index/$PREFIX/$CRATE_NAME
     cp $RELEASE_P/* ../alire-index/index/$PREFIX/$CRATE_NAME/
 done
 
