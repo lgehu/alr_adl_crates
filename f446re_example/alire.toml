@@ -16,9 +16,3 @@ stm32_common = "~0.1.0-dev"
 
 [[depends-on]]
 nucleo_f446re = "~0.1.0-dev"
-<<<<<<< HEAD
-=======
-
-[[pins]]
-nucleo_f446re = { path='../nucleo_f446re' }
->>>>>>> environment

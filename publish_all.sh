@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT_DIR=$(dirname "$(realpath "$0")") 
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
 for dir in */ ; do
     CRATE_NAME=${dir%/}
     PREFIX=${CRATE_NAME:0:2}
@@ -9,7 +9,6 @@ for dir in */ ; do
     )
 done
 
-SCRIPT_DIR=$(dirname "$(realpath "$0")") 
 for dir in */ ; do
     CRATE_NAME=${dir%/}
     PREFIX=${CRATE_NAME:0:2}
