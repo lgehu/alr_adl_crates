@@ -2,24 +2,12 @@ name = "stm32_common"
 description = ""
 version = "0.1.0-dev"
 
-<<<<<<< HEAD
 authors = ["Your Name"]
 maintainers = ["lgehu <lauric_gehu@etu.u-bourgogne.fr>"]
 maintainers-logins = ["lgehu"]
-licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
-website = ""
-tags = ["stm32", "arm"]
-
-=======
-authors = ["lgeh"]
-maintainers = ["lgehu <lauric_gehu@etu.u-bourgogne.fr>"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags = ["stm32"]
 
 [[depends-on]]
 arm = "~0.1.0-dev"
-
-[[pins]]
-arm = { path='../arm' }
->>>>>>> environment
