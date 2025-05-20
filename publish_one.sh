@@ -11,3 +11,4 @@ expect "Is this information correct?"
 send -- "Y\n"
 expect "Do you want to proceed with this information?"
 send -- "Y\n"
+sleep 1
