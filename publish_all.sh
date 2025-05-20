@@ -1,4 +1,7 @@
 #!/bin/bash
+
+git stash # Stash current change otherwise alire won't be happy
+
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 for dir in */ ; do
     CRATE_NAME=${dir%/}
@@ -15,3 +18,5 @@ for dir in */ ; do
     cp $CRATE_NAME/alire/archives/* $CRATE_NAME/
     cp $CRATE_NAME/alire/releases/* ../alire-index/index/$PREFIX/$CRATE_NAME/
 done
+
+git stash pop 
