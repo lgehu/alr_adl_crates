@@ -46,4 +46,6 @@ git add -A
 git commit -m "release $CRATE_VERSION"
 git push origin
 
+alr index --update-all
+
 #git stash pop 
