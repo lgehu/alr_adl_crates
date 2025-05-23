@@ -50,13 +50,6 @@ for Source_Dirs use ("src/**", "config/", Middleware_Config.ADL_CONFIG_PATH);
 
 The nucleo_f446re GPR is modified and every Source path is removed.
 
-# Remote depo without alire index
-In this branch we try to reference each dependencies of crate to this repo. This repo would act as a private alire index.
-In this way, use could do something like: alr with use='https://github.com/lgehul/alr_adl_crates/middleware/middleware.git'
-However, we can't init subrepo into the same repo.
-The easy way would be to have one repo for each folder but we are trying to keep everything grouped.
-
-
 ## TODO ##
 - Complete alire.toml for each crate to describe the crate release (version, description etc).
 - Test crates with other board specification
