@@ -12,8 +12,8 @@ project Arm is
     Src_Dirs_Root & "/cortex_m/src/fpu", -- From arch definition
     Src_Dirs_Root & "/cortex_m/src/nocache", -- From arch definition
     Src_Dirs_Root & "/cortex_m/src/nvic_cm4_cm7", -- From arch definition
-    Src_Dirs_Root & "/STM32/devices/stm32f40x/", -- From MCU definition
-    Src_Dirs_Root & "/STM32/svd/stm32f40x", -- From MCU definition
+    Src_Dirs_Root & "/STM32/devices/stm32f446/", -- From MCU definition
+    Src_Dirs_Root & "/STM32/svd/stm32f446", -- From MCU definition
     Src_Dirs_Root & "/STM32/drivers/", -- From MCU definition
     Src_Dirs_Root & "/STM32/drivers/dma/", -- From MCU definition
     Src_Dirs_Root & "/STM32/drivers/dma_interrupts/", -- From MCU definition
