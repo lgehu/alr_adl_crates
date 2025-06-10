@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Ada_Drivers_Library-dp\arch\ARM\STM32\svd\stm32f446\stm32_svd.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 76" line=" 21" >
+      <vfs_project>C:\Ada_Drivers_Library-dp\arch\ARM\STM32\svd\stm32f446\default.gpr</vfs_project>
+      <vfs_file>C:\Ada_Drivers_Library-dp\arch\ARM\STM32\svd\stm32f446\stm32_svd.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Ada_Drivers_Library-dp\arch\ARM\STM32\svd\stm32f446\stm32_svd-pwr.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
