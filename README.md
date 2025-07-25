@@ -5,6 +5,15 @@ Example: Running `alr get f446re_example` would download a template for building
 Then, Alire will download the ADL once with the right board specification linked to this project.
 The end goal would be to push these crates to the Alire crates repo.
 
+# Compile an example
+ You must execute the following commands to run the example:
+```bash
+alr index --add=git+https://github.com/lgehu/alire-index.git --name private
+alr get f446re_example
+cd f446re_example
+alr toolchain --select gnat_arm_elf=14.2.1 gprbuild=22.0.1
+```
+
 ## What we did ##
 We split the ADL into 5 crates.
 During compilation of single unit, we found out that some crate was depending on other crate
@@ -37,18 +46,29 @@ alr build
 In the middleware GPR. We add ADL_CONFIG_PATH variable set by the alire.toml in the nucleof446re.
 Thus, every new board will have to add the following lines in their alire.toml:
 
-[configuration.values]
-middleware.ADL_CONFIG_PATH = "../nucleo_f446re/src/full/"
+[environment]
+ADL_CONFIG_PATH.set= "${CRATE_ROOT}/src/full/"
 
 This is needed to bypass circular reference with alire, since the middleware depend on the board.
 
-The middleware .toml has these lines added:
-[configuration.variables]
-ADL_CONFIG_PATH = {type = "String", default = ""}
-And the GPR has:  
-for Source_Dirs use ("src/**", "config/", Middleware_Config.ADL_CONFIG_PATH);
+The middleware's GPR has:  
+ADL_Config_Path := external ("ADL_CONFIG_PATH");
+for Source_Dirs use ("src/**", "config/", ADL_CONFIG_PATH);
 
 The nucleo_f446re GPR is modified and every Source path is removed.
+
+# Remote depo without alire index
+In this branch we try to reference each dependencies of crate to this repo. This repo would act as a private alire index.
+In this way, use could do something like: `alr with use='https://github.com/lgehul/alr_adl_crates/middleware/middleware.git'`  
+Or by simply adding a new private index: `alr index --add=git+https://github.com/lgehu/alire-index.git --name private`  
+
+Then, we create an archive for each crate in the repo with:  
+`alr publish --tar --skip-build --for-private-index`  
+Here, we skip build step because the hal and middleware are abstract and cannot be compiled unless a compiler is specified. We also specify that we do not publish on the community index.
+Once done, it generate an archive that we have to push in the repo and a .toml to be copied and push in our private index.
+
+## Script
+We automatized this processus with a script. It generate an archive and a manifest for each crate and push it to this and alire-index repo. Therefore, the alire-index should be clone beside this repo.
 
 ## TODO ##
 - Complete alire.toml for each crate to describe the crate release (version, description etc).
